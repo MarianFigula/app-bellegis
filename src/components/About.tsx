@@ -20,9 +20,7 @@ export default function About() {
             </p>
           </div>
 
-          <div className="flex items-center justify-center bg-warm-white rounded-xl border border-warm-border min-h-50 md:min-h-70">
-            <img src={logo} alt="BELLegis" className="h-auto object-fit" />
-          </div>
+          <img src={logo} alt="BELLegis" className="w-full h-auto rounded-xl border border-warm-border" />
         </div>
       </div>
     </section>

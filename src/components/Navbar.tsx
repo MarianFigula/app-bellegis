@@ -60,19 +60,33 @@ export default function Navbar() {
           />
         </button>
 
-        {/* Nav links */}
-        <ul
-          className={`list-none ${
-            menuOpen
-              ? 'flex flex-col absolute top-full left-0 right-0 bg-[rgba(253,252,250,0.97)] backdrop-blur-md px-6 py-4 gap-1 border-b border-warm-border'
-              : 'hidden'
-          } md:flex md:flex-row md:gap-2 md:static md:bg-transparent md:p-0 md:border-none md:backdrop-blur-none`}
-        >
+        {/* Desktop nav */}
+        <ul className="list-none hidden md:flex md:flex-row md:gap-2">
           {links.map(({ id, label }) => (
             <li key={id}>
               <button
                 onClick={() => handleNav(id)}
-                className="w-full text-left md:w-auto md:text-center bg-transparent border-none font-body text-sm font-normal text-brown-mid px-4.5 py-3 md:py-2 rounded-md cursor-pointer transition-all duration-250 tracking-[0.2px] hover:text-brown-dark hover:bg-gold/8"
+                className="bg-transparent border-none font-body text-sm font-normal text-brown-mid px-4.5 py-2 rounded-md cursor-pointer transition-all duration-250 tracking-[0.2px] hover:text-brown-dark hover:bg-gold/8"
+              >
+                {label}
+              </button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {/* Mobile menu — animated slide-down */}
+      <div
+        className={`md:hidden absolute top-full left-0 right-0 overflow-hidden transition-[max-height,opacity] duration-300 ease-in-out ${
+          menuOpen ? 'max-h-60 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <ul className="list-none flex flex-col bg-[rgba(253,252,250,0.97)] backdrop-blur-md px-6 py-4 gap-1 border-b border-warm-border">
+          {links.map(({ id, label }) => (
+            <li key={id}>
+              <button
+                onClick={() => handleNav(id)}
+                className="w-full text-left bg-transparent border-none font-body text-sm font-normal text-brown-mid px-4.5 py-3 rounded-md cursor-pointer transition-all duration-250 tracking-[0.2px] hover:text-brown-dark hover:bg-gold/8"
               >
                 {label}
               </button>
