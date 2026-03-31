@@ -66,7 +66,11 @@ export default function Navbar() {
             <li key={id}>
               <button
                 onClick={() => handleNav(id)}
-                className="bg-transparent border-none font-body text-sm font-normal text-brown-mid px-4.5 py-2 rounded-md cursor-pointer transition-all duration-250 tracking-[0.2px] hover:text-brown-dark hover:bg-gold/8"
+                className={`bg-transparent border-none font-body text-sm font-normal px-4.5 py-2 rounded-md cursor-pointer transition-all duration-250 tracking-[0.2px] ${
+                  scrolled
+                    ? 'text-brown-mid hover:text-brown-dark hover:bg-gold/8'
+                    : 'text-dark-fg hover:text-gold-light'
+                }`}
               >
                 {label}
               </button>

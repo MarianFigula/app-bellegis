@@ -33,16 +33,18 @@ export default function Contact() {
   return (
     <section id="kontakt" className="py-24 md:py-32 bg-surface-dark text-dark-fg">
       <div className="container">
-        <h2 className="font-heading text-3xl md:text-4xl font-semibold text-center mb-4 text-border">
-          Kontakt
-        </h2>
-        <div className="w-16 h-0.5 bg-gold mx-auto mb-16" />
+        <div className="text-center mb-14 md:mb-24">
+          <p className="section-label">Kontakt</p>
+          <h2 className="font-heading text-2xl md:text-4xl font-normal text-dark-fg">
+            Spojte sa s nami
+          </h2>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-16 max-w-5xl mx-auto">
           {/* Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="font-heading text-xl font-semibold mb-4 text-border">
+              <h3 className="font-heading text-xl font-normal mb-4 text-dark-fg">
                 BELLegis s.r.o.
               </h3>
               <div className="space-y-3 text-dark-fg/80">
@@ -98,7 +100,7 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 font-body text-base font-medium py-4 bg-gold text-warm-white rounded-lg cursor-pointer transition-colors duration-200 hover:bg-gold/90"
+              className="w-full flex items-center justify-center gap-2 font-body text-base font-medium py-4 bg-gold text-warm-white cursor-pointer transition-colors duration-200 hover:bg-gold-dark"
             >
               <Send size={18} />
               Odoslať správu
