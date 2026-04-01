@@ -6,9 +6,12 @@ const inputClass =
   'w-full px-4 py-3 font-body text-sm text-dark-fg bg-dark-fg/10 border border-dark-fg/20 rounded-lg outline-none transition-colors duration-[250ms] placeholder:text-dark-fg/40 focus:ring-1 focus:ring-gold focus:border-gold'
 
 const contactInfo = [
-  { icon: <MapPin size={18} className="mt-0.5 shrink-0" />, text: 'Bratislava, Slovensko' },
+  {
+    icon: <MapPin size={18} className="mt-0.5 shrink-0" />,
+    text: 'Južná trieda 48B, 040 01 Košice - mestská časť Juh',
+  },
   { icon: <Phone size={18} className="shrink-0" />, text: '+421 XXX XXX XXX' },
-  { icon: <Mail size={18} className="shrink-0" />, text: 'info@bellegis.sk' },
+  { icon: <Mail size={18} className="shrink-0" />, text: 'bellegis@bellegis.sk' },
 ]
 
 export default function Contact() {
