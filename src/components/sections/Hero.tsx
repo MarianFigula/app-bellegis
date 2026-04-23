@@ -1,10 +1,8 @@
-import treeImg from '../assets/Logo strom-transparent-enhanced.png'
+import treeImg from '../../assets/Logo strom-transparent-enhanced.png'
+import { scrollToSection } from '../../utils/scrollToSectionUtil.ts'
+import { SECTION_TYPES } from '../../types/sectionsType.ts'
 
 export default function Hero() {
-  const scrollToContact = () => {
-    document.getElementById('kontakt')?.scrollIntoView({ behavior: 'smooth' })
-  }
-
   return (
     <section
       className="relative min-h-svh overflow-hidden flex items-center"
@@ -61,7 +59,7 @@ export default function Hero() {
 
           {/* CTA */}
           <button
-            onClick={scrollToContact}
+            onClick={() => scrollToSection(SECTION_TYPES.contact)}
             className="font-body text-[11px] font-medium tracking-[2.5px] uppercase py-3.75 px-11.5 text-gold-light bg-transparent border border-gold/50 hover:bg-gold hover:text-cream hover:border-gold transition-all duration-300 cursor-pointer fade-in fade-in-delay-4"
           >
             Kontaktujte nás

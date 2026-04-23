@@ -1,22 +1,9 @@
-import { useEffect, useRef, useState } from 'react'
+import { useReveal } from '../../hooks/useReveal.ts'
+import SectionHeader from './SectionHeader.tsx'
+import { SECTION_TYPES } from '../../types/sectionsType.ts'
 
 export default function About() {
-  const [visible, setVisible] = useState(false)
-  const sectionRef = useRef<HTMLElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.2 }
-    )
-    if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
-  }, [])
+  const [sectionRef, visible] = useReveal<HTMLElement>()
 
   const base = 'transition-all duration-700 ease-out'
   const hidden = 'opacity-0 translate-y-6'
@@ -25,25 +12,14 @@ export default function About() {
   return (
     <section
       ref={sectionRef}
-      id="o-nas"
+      id={SECTION_TYPES.about}
       className="min-h-svh flex items-center bg-warm-white border-t border-warm-border py-16 md:py-20"
     >
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           {/* Left — staggered fade-up */}
           <div>
-            <p
-              className={`section-label ${base} ${visible ? shown : hidden}`}
-              style={{ transitionDelay: '0ms' }}
-            >
-              O spoločnosti
-            </p>
-            <h2
-              className={`text-2xl md:text-4xl mb-5 ${base} ${visible ? shown : hidden}`}
-              style={{ transitionDelay: '150ms' }}
-            >
-              BELLegis s.r.o.
-            </h2>
+            <SectionHeader label="O spoločnosti" title="BELLegis s. r. o." />
             <p
               className={`text-sm leading-[1.75] text-brown-light mb-4 ${base} ${visible ? shown : hidden}`}
               style={{ transitionDelay: '300ms' }}

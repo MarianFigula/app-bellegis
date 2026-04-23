@@ -1,5 +1,7 @@
-import { useEffect, useRef, useState } from 'react'
-import ServiceRow from './ServiceRow'
+import ServiceRow from '../ServiceRow.tsx'
+import { useReveal } from '../../hooks/useReveal.ts'
+import SectionHeader from './SectionHeader.tsx'
+import { SECTION_TYPES } from '../../types/sectionsType.ts'
 
 const services = [
   {
@@ -20,46 +22,27 @@ const services = [
 ]
 
 export default function Services() {
-  const [headerVisible, setHeaderVisible] = useState(false)
-  const headerRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHeaderVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.5 }
-    )
-    if (headerRef.current) observer.observe(headerRef.current)
-    return () => observer.disconnect()
-  }, [])
+  const [headerRef, headerVisible] = useReveal<HTMLDivElement>(0.5)
 
   return (
     <section
-      id="sluzby"
+      id={SECTION_TYPES.services}
       className="min-h-svh flex flex-col bg-cream border-t border-warm-border py-16 md:py-20"
     >
       <div className="container flex-1 flex flex-col">
-
         {/* Header */}
         <div
           ref={headerRef}
           className={`mb-10 md:mb-14 transition-all duration-700 ease-out ${headerVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6'}`}
         >
-          <p className="section-label">Naše služby</p>
-          <h2 className="text-2xl md:text-4xl">Čo pre vás môžeme urobiť</h2>
+          <SectionHeader label="Naše služby" title="Čo pre vás môžeme urobiť" />
         </div>
-
         {/* Rows */}
         <div className="flex-1 flex flex-col">
           {services.map((service, i) => (
             <ServiceRow key={i} index={i} title={service.title} description={service.description} />
           ))}
         </div>
-
       </div>
     </section>
   )

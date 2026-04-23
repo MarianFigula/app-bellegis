@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useReveal } from '../hooks/useReveal.ts'
 
 type Props = {
   title: string
@@ -7,22 +7,7 @@ type Props = {
 }
 
 export default function ServiceRow({ title, description, index }: Props) {
-  const [visible, setVisible] = useState(false)
-  const rowRef = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setVisible(true)
-          observer.disconnect()
-        }
-      },
-      { threshold: 0.35 }
-    )
-    if (rowRef.current) observer.observe(rowRef.current)
-    return () => observer.disconnect()
-  }, [])
+  const [rowRef, visible] = useReveal<HTMLDivElement>(0.35)
 
   return (
     <div
