@@ -151,7 +151,7 @@
 }
 
 /* ─── Autofill override ──────────────────────────────────────────────────────
- * Must live outside any @layer — browsers enforce autofill styles at a
+ * Must live outside any @layer - browsers enforce autofill styles at a
  * specificity that @layer base cannot beat. The inset box-shadow paints
  * over the forced white background with our dark surface color. */
 input:-webkit-autofill,

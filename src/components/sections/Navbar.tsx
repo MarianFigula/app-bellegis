@@ -47,7 +47,7 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-100 border-b transition-all duration-350 ease-out ${navScrolledClasses}`}
     >
       <div className="container flex items-center justify-between">
-        <a href="/" aria-label="BELLegis — Domov">
+        <a href="/" aria-label="BELLegis - Domov">
           <img
             src={logoWithoutBottomText}
             alt="BELLegis s. r. o. logo"

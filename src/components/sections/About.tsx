@@ -17,7 +17,7 @@ export default function About() {
     >
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Left — staggered fade-up */}
+          {/* Left - staggered fade-up */}
           <div>
             <SectionHeader label="O spoločnosti" title="BELLegis s. r. o." />
             <p
@@ -37,7 +37,7 @@ export default function About() {
             </p>
           </div>
 
-          {/* Right — slides in from right */}
+          {/* Right - slides in from right */}
           <div
             className={`${base} duration-1000 ${visible ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-12'}`}
             style={{ transitionDelay: '200ms' }}

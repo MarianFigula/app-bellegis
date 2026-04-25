@@ -13,12 +13,13 @@
     <xhtml:link rel="alternate" hreflang="x-default" href="https://bellegis.sk/" />
     <image:image>
       <image:loc>https://bellegis.sk/og-image.jpg</image:loc>
-      <image:title>BELLegis s. r. o. — Rastieme spolu</image:title>
+      <image:title>BELLegis s. r. o. - Rastieme spolu</image:title>
       <image:caption>Realitné a podnikateľské poradenstvo Košice</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://bellegis.sk/apple-touch-icon.png</image:loc>
-      <image:title>BELLegis logo</image:title>
+      <image:loc>https://bellegis.sk/bellegis-logo.png</image:loc>
+      <image:title>BELLegis s. r. o. logo</image:title>
+      <image:caption>BELLegis - Rastieme spolu</image:caption>
     </image:image>
   </url>
 

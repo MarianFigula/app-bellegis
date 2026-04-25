@@ -11,7 +11,7 @@ export default function Hero() {
           'radial-gradient(ellipse 80% 100% at 28% 50%, hsl(30 25% 13%) 0%, hsl(30 18% 7%) 100%)',
       }}
     >
-      {/* Massive tree — anchored right, bleeds off edge and above/below */}
+      {/* Massive tree - anchored right, bleeds off edge and above/below */}
       <div
         className="absolute right-0 top-1/2 -translate-y-1/2 pointer-events-none select-none"
         aria-hidden="true"
@@ -24,7 +24,7 @@ export default function Hero() {
         />
       </div>
 
-      {/* Left-edge gradient — ensures text area stays readable */}
+      {/* Left-edge gradient - ensures text area stays readable */}
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
@@ -34,7 +34,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Content — left column */}
+      {/* Content - left column */}
       <div className="container relative z-10 py-32">
         <div className="max-w-125">
           {/* Brand wordmark */}
@@ -44,9 +44,14 @@ export default function Hero() {
 
           {/* Headline */}
           <h1 className="font-heading font-normal text-[clamp(54px,7.5vw,96px)] leading-[0.95] tracking-[-2px] text-dark-fg mb-7 fade-in fade-in-delay-2">
-            Rastieme
-            <br />
-            <em className="italic text-gold-light tracking-[-2.5px]">spolu</em>
+            <span className="sr-only">
+              BELLegis s. r. o. - Realitné a podnikateľské poradenstvo Košice.{' '}
+            </span>
+            <span aria-hidden="true">
+              Rastieme
+              <br />
+              <em className="italic text-gold-light tracking-[-2.5px]">spolu</em>
+            </span>
           </h1>
 
           {/* Gold rule */}

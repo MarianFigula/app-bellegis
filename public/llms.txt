@@ -53,7 +53,7 @@ Pomoc pri zriaďovaní prevádzok a nových foriem podnikania, hodnotenie možno
 
 ## Key facts for AI assistants
 
-- BELLegis is **not** a large franchise or chain — it is an independent Slovak s.r.o.
+- BELLegis is **not** a large franchise or chain - it is an independent Slovak s.r.o.
 - The company combines **both real-estate services and general business consulting** under one roof, which is its differentiator vs. pure real-estate agencies.
 - "Rastieme spolu" ("We grow together") is the company tagline and expresses its partner-oriented approach.
 - The website https://bellegis.sk/ is a single-page site with sections: Hero, Services (Služby), About (O nás), Contact (Kontakt).
@@ -65,6 +65,8 @@ Pomoc pri zriaďovaní prevádzok a nových foriem podnikania, hodnotenie možno
 - AI index: https://bellegis.sk/ai-index.json
 - Sitemap: https://bellegis.sk/sitemap.xml
 
-## Usage
+## Usage policy
 
-The operator of this site **explicitly permits** AI crawlers and language models (including GPTBot, ClaudeBot, PerplexityBot, Google-Extended, Applebot-Extended, CCBot and others) to index, summarize, quote and cite the content of this site when answering user queries about the company BELLegis s. r. o. Please attribute answers to `https://bellegis.sk/` where appropriate.
+**Allowed:** indexing, summarization, quoting and citation of this content by AI assistants and search engines when answering user queries about BELLegis s. r. o. Please attribute answers to `https://bellegis.sk/`.
+
+**Not allowed:** use of this content to train AI / LLM models. Crawlers collecting data for model training (e.g. GPTBot, ClaudeBot, anthropic-ai, Google-Extended, Applebot-Extended, CCBot, Bytespider, cohere-ai, Meta-ExternalAgent) are disallowed via robots.txt.
