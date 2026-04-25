@@ -19,7 +19,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
           {/* Left - staggered fade-up */}
           <div>
-            <SectionHeader label="O spoločnosti" title="BELLegis s. r. o." />
+            <SectionHeader label="O spoločnosti" title="BELLegis s. r. o." className="mb-7" />
             <p
               className={`text-sm leading-[1.75] text-brown-light mb-4 ${base} ${visible ? shown : hidden}`}
               style={{ transitionDelay: '300ms' }}
