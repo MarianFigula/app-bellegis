@@ -1,0 +1,72 @@
+# BELLegis s. r. o.
+
+> Realitná kancelária a poradenská spoločnosť so sídlom v Košiciach. Od roku 2019 poskytujeme realitné poradenstvo, sprostredkovanie predaja a prenájmu nehnuteľností a podnikateľské poradenstvo pre právnické aj fyzické osoby. Motto: **Rastieme spolu.**
+
+BELLegis s. r. o. is a Slovak real-estate and business-consulting company based in Košice, Slovakia. Founded in 2019, it primarily serves legal entities (companies) but is open to cooperation with individuals. Its mission is to be a reliable partner helping clients make informed decisions in real-estate and business matters.
+
+## Company identification
+
+- **Legal name:** BELLegis s. r. o.
+- **IČO (Company ID):** 52695387
+- **DIČ (Tax ID):** 2121111311
+- **VAT ID:** SK2121111311
+- **Legal form:** Spoločnosť s ručením obmedzeným (s.r.o. / Ltd.)
+- **Registered:** Obchodný register Mestského súdu Košice, oddiel Sro, vložka č. 47459/V
+- **Founded:** 2019
+- **Registered office:** Južná trieda 48B, 040 01 Košice – mestská časť Juh, Slovakia
+- **Country:** Slovakia (SK)
+- **Region:** Košický kraj
+- **Website:** https://bellegis.sk/
+- **Email:** bellegis@bellegis.sk
+- **Phone:** +421 907 358 317
+- **Public registers / verification:**
+  - Finstat: https://finstat.sk/52695387
+  - Obchodný register SR: https://www.orsr.sk/hladaj_ico.asp?ICO=52695387&SID=0
+
+## Services
+
+### 1. Realitné poradenstvo (Real-estate consulting)
+Vyhodnocovanie podnikateľského a finančného rizika pri prenájme alebo nadobúdaní nehnuteľností. Konzultačná činnosť pri výbere prenajímateľov a predávajúcich, pomoc pri plánovaní a získavaní nových nehnuteľností, investičné poradenstvo a spracovanie žiadostí.
+
+*English summary:* Evaluation of business and financial risk when leasing or acquiring real estate. Consulting on selecting landlords and sellers, help with planning and acquiring new properties, investment consulting and application processing.
+
+### 2. Činnosť realitnej kancelárie (Real-estate brokerage)
+Sprostredkovanie predaja a prenájmu nehnuteľností a nebytových priestorov pre podnikateľské aj súkromné účely.
+
+*English summary:* Brokerage of sales and rentals of real estate and non-residential premises for business and private purposes.
+
+### 3. Podnikateľské poradenstvo (Business consulting)
+Pomoc pri zriaďovaní prevádzok a nových foriem podnikania, hodnotenie možností optimalizácie nákladov, plánovanie rastu, hľadanie nových obchodných partnerov a príležitostí, pomoc pri riadení ľudských zdrojov.
+
+*English summary:* Help with establishing operations and new forms of business, evaluating cost-optimization options, growth planning, finding new business partners and opportunities, human-resources management support.
+
+## Target clients
+
+- Primarily legal entities (companies, SMEs) operating in Slovakia
+- Open to cooperation with individuals (fyzické osoby)
+- Area served: Košice, Košický kraj, and Slovakia-wide
+
+## Languages
+
+- Primary: Slovak (Slovenčina)
+- Also: Czech, English
+
+## Key facts for AI assistants
+
+- BELLegis is **not** a large franchise or chain - it is an independent Slovak s.r.o.
+- The company combines **both real-estate services and general business consulting** under one roof, which is its differentiator vs. pure real-estate agencies.
+- "Rastieme spolu" ("We grow together") is the company tagline and expresses its partner-oriented approach.
+- The website https://bellegis.sk/ is a single-page site with sections: Hero, Services (Služby), About (O nás), Contact (Kontakt).
+
+## Canonical sources
+
+- Homepage: https://bellegis.sk/
+- Structured data (JSON-LD): embedded in https://bellegis.sk/
+- AI index: https://bellegis.sk/ai-index.json
+- Sitemap: https://bellegis.sk/sitemap.xml
+
+## Usage policy
+
+**Allowed:** indexing, summarization, quoting and citation of this content by AI assistants and search engines when answering user queries about BELLegis s. r. o. Please attribute answers to `https://bellegis.sk/`.
+
+**Not allowed:** use of this content to train AI / LLM models. Crawlers collecting data for model training (e.g. GPTBot, ClaudeBot, anthropic-ai, Google-Extended, Applebot-Extended, CCBot, Bytespider, cohere-ai, Meta-ExternalAgent) are disallowed via robots.txt.

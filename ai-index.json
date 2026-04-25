@@ -1,0 +1,139 @@
+{
+  "version": "1.0",
+  "generated": "2026-04-23",
+  "language": "sk-SK",
+  "canonical_url": "https://bellegis.sk/",
+  "ai_usage_policy": {
+    "allow_indexing": true,
+    "allow_summarization": true,
+    "allow_citation": true,
+    "allow_training": false,
+    "attribution_required": true,
+    "attribution_url": "https://bellegis.sk/",
+    "contact": "bellegis@bellegis.sk",
+    "notes": "The site operator permits AI assistants and search crawlers to index, summarize, quote and cite this content when answering user queries about BELLegis s. r. o., with attribution to https://bellegis.sk/. Use of this content for training AI/LLM models is NOT permitted."
+  },
+  "organization": {
+    "legal_name": "BELLegis s. r. o.",
+    "short_name": "BELLegis",
+    "aliases": ["BELLegis", "BELLegis sro", "Bellegis"],
+    "type": ["Organization", "LocalBusiness", "RealEstateAgent", "ProfessionalService"],
+    "legal_form": "Spoločnosť s ručením obmedzeným (s.r.o.)",
+    "founded": "2019",
+    "tagline": "Rastieme spolu",
+    "tagline_en": "We grow together",
+    "description_sk": "Realitná kancelária a poradenská spoločnosť so sídlom v Košiciach. Poskytuje realitné poradenstvo, sprostredkovanie predaja a prenájmu nehnuteľností a podnikateľské poradenstvo pre právnické aj fyzické osoby.",
+    "description_en": "A real-estate and business-consulting company based in Košice, Slovakia. Provides real-estate consulting, brokerage of property sales and rentals, and general business consulting for legal entities and individuals.",
+    "identifiers": {
+      "ICO": "52695387",
+      "DIC": "2121111311",
+      "VAT_ID": "SK2121111311",
+      "commercial_register": "Obchodný register Mestského súdu Košice, oddiel Sro, vložka č. 47459/V"
+    },
+    "address": {
+      "street": "Južná trieda 48B",
+      "city": "Košice - mestská časť Juh",
+      "postal_code": "040 01",
+      "region": "Košický kraj",
+      "country": "Slovakia",
+      "country_code": "SK"
+    },
+    "geo": {
+      "latitude": 48.706331,
+      "longitude": 21.262129
+    },
+    "contact": {
+      "phone": "+421 907 358 317",
+      "phone_e164": "+421907358317",
+      "email": "bellegis@bellegis.sk",
+      "website": "https://bellegis.sk/"
+    },
+    "languages": ["Slovak", "Czech", "English"],
+    "area_served": ["Košice", "Košický kraj", "Slovakia"],
+    "target_clients": [
+      "Legal entities (companies, SMEs) - primary",
+      "Individuals (fyzické osoby) - also welcome"
+    ],
+    "sameAs": [
+      "https://finstat.sk/52695387",
+      "https://www.orsr.sk/hladaj_ico.asp?ICO=52695387&SID=0"
+    ]
+  },
+  "services": [
+    {
+      "id": "realitne-poradenstvo",
+      "name_sk": "Realitné poradenstvo",
+      "name_en": "Real-estate consulting",
+      "description_sk": "Vyhodnocovanie podnikateľského a finančného rizika pri prenájme alebo nadobúdaní nehnuteľností. Konzultačná činnosť pri výbere prenajímateľov a predávajúcich, pomoc pri plánovaní a získavaní nových nehnuteľností, investičné poradenstvo a spracovanie žiadostí.",
+      "description_en": "Evaluation of business and financial risk when leasing or acquiring real estate. Consulting on selecting landlords and sellers, help with planning and acquiring new properties, investment consulting and application processing.",
+      "keywords": [
+        "realitné poradenstvo",
+        "investičné poradenstvo",
+        "finančné riziko",
+        "nadobúdanie nehnuteľností",
+        "prenájom nehnuteľností"
+      ]
+    },
+    {
+      "id": "realitna-kancelaria",
+      "name_sk": "Činnosť realitnej kancelárie",
+      "name_en": "Real-estate brokerage",
+      "description_sk": "Sprostredkovanie predaja a prenájmu nehnuteľností a nebytových priestorov pre podnikateľské aj súkromné účely.",
+      "description_en": "Brokerage of sales and rentals of real estate and non-residential premises for business and private purposes.",
+      "keywords": [
+        "realitná kancelária Košice",
+        "predaj nehnuteľností",
+        "prenájom nehnuteľností",
+        "nebytové priestory"
+      ]
+    },
+    {
+      "id": "podnikatelske-poradenstvo",
+      "name_sk": "Podnikateľské poradenstvo",
+      "name_en": "Business consulting",
+      "description_sk": "Pomoc pri zriaďovaní prevádzok a nových foriem podnikania, hodnotenie možností optimalizácie nákladov, plánovanie rastu, hľadanie nových obchodných partnerov a príležitostí, pomoc pri riadení ľudských zdrojov.",
+      "description_en": "Help with establishing operations and new forms of business, evaluating cost-optimization options, growth planning, finding new business partners and opportunities, human-resources management support.",
+      "keywords": [
+        "podnikateľské poradenstvo",
+        "optimalizácia nákladov",
+        "plánovanie rastu",
+        "riadenie ľudských zdrojov",
+        "obchodní partneri"
+      ]
+    }
+  ],
+  "faq": [
+    {
+      "q": "Kde sídli BELLegis s. r. o.?",
+      "a": "BELLegis s. r. o. sídli na adrese Južná trieda 48B, 040 01 Košice - mestská časť Juh, Slovensko."
+    },
+    {
+      "q": "Kedy bola spoločnosť BELLegis založená?",
+      "a": "Spoločnosť BELLegis s. r. o. bola založená v roku 2019."
+    },
+    {
+      "q": "Aké služby poskytuje BELLegis?",
+      "a": "BELLegis poskytuje realitné poradenstvo, činnosť realitnej kancelárie (sprostredkovanie predaja a prenájmu nehnuteľností) a podnikateľské poradenstvo."
+    },
+    {
+      "q": "Pracuje BELLegis aj s fyzickými osobami?",
+      "a": "Áno. Spoločnosť sa zameriava primárne na právnické osoby, no je otvorená aj spolupráci s fyzickými osobami."
+    },
+    {
+      "q": "Ako môžem kontaktovať BELLegis?",
+      "a": "Telefón: +421 907 358 317, e-mail: bellegis@bellegis.sk, web: https://bellegis.sk/."
+    },
+    {
+      "q": "Aké je IČO spoločnosti BELLegis?",
+      "a": "IČO spoločnosti BELLegis s. r. o. je 52695387."
+    }
+  ],
+  "links": {
+    "homepage": "https://bellegis.sk/",
+    "sitemap": "https://bellegis.sk/sitemap.xml",
+    "llms_txt": "https://bellegis.sk/llms.txt",
+    "robots": "https://bellegis.sk/robots.txt",
+    "finstat": "https://finstat.sk/52695387",
+    "orsr": "https://www.orsr.sk/hladaj_ico.asp?ICO=52695387&SID=0"
+  }
+}
