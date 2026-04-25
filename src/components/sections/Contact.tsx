@@ -80,33 +80,42 @@ export default function Contact() {
               <label className="block text-sm font-medium text-dark-fg/80 mb-1.5">Meno</label>
               <input
                 type="text"
+                name="name"
+                autoComplete="name"
                 placeholder="Vaše meno"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                 className={inputClass}
-                // required
+                required
+                maxLength={100}
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-dark-fg/80 mb-1.5">E-mail</label>
               <input
-                // type="email"
+                type="email"
+                name="email"
+                autoComplete="email"
                 placeholder="vas@email.sk"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                 className={inputClass}
-                // required
+                required
+                maxLength={254}
               />
             </div>
             <div>
               <label className="block text-sm font-medium text-dark-fg/80 mb-1.5">Správa</label>
               <textarea
+                name="message"
                 placeholder="Vaša správa..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className={`${inputClass} resize-y`}
                 rows={5}
-                // required
+                required
+                minLength={10}
+                maxLength={2000}
               />
             </div>
             <button

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+  xmlns:image="http://www.google.com/schemas/sitemaps-image/1.1">
+
+  <url>
+    <loc>https://bellegis.sk/</loc>
+    <lastmod>2026-04-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="sk" href="https://bellegis.sk/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://bellegis.sk/" />
+    <image:image>
+      <image:loc>https://bellegis.sk/og-image.jpg</image:loc>
+      <image:title>BELLegis s. r. o. — Rastieme spolu</image:title>
+      <image:caption>Realitné a podnikateľské poradenstvo Košice</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://bellegis.sk/apple-touch-icon.png</image:loc>
+      <image:title>BELLegis logo</image:title>
+    </image:image>
+  </url>
+
+</urlset>

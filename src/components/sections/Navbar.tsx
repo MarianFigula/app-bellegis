@@ -31,9 +31,11 @@ export default function Navbar() {
   const scrolled = useScrolled()
   const [menuOpen, setMenuOpen] = useState(false)
 
-  const handleNav = (id: string) => {
+  const handleNav = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
+    e.preventDefault()
     setMenuOpen(false)
     scrollToSection(id)
+    history.replaceState(null, '', `#${id}`)
   }
 
   const navScrolledClasses = scrolled
@@ -45,10 +47,10 @@ export default function Navbar() {
       className={`fixed top-0 left-0 right-0 z-100 border-b transition-all duration-350 ease-out ${navScrolledClasses}`}
     >
       <div className="container flex items-center justify-between">
-        <a href="..">
+        <a href="/" aria-label="BELLegis — Domov">
           <img
             src={logoWithoutBottomText}
-            alt="BELLegis"
+            alt="BELLegis s. r. o. logo"
             className={`w-auto transition-all duration-350 ${scrolled ? 'h-12' : 'h-14'}`}
           />
         </a>
@@ -58,7 +60,12 @@ export default function Navbar() {
         <ul className="list-none hidden md:flex md:flex-row md:gap-2">
           {NAV_LINKS.map(({ id, label }) => (
             <li key={id}>
-              <NavLink label={label} onClick={() => handleNav(id)} scrolled={scrolled} />
+              <NavLink
+                label={label}
+                href={`#${id}`}
+                onClick={(e) => handleNav(e, id)}
+                scrolled={scrolled}
+              />
             </li>
           ))}
         </ul>
@@ -73,7 +80,13 @@ export default function Navbar() {
         <ul className="list-none flex flex-col bg-[rgba(253,252,250,0.97)] backdrop-blur-md px-6 py-4 gap-1 border-b border-warm-border">
           {NAV_LINKS.map(({ id, label }) => (
             <li key={id}>
-              <NavLink label={label} onClick={() => handleNav(id)} scrolled={scrolled} mobile />
+              <NavLink
+                label={label}
+                href={`#${id}`}
+                onClick={(e) => handleNav(e, id)}
+                scrolled={scrolled}
+                mobile
+              />
             </li>
           ))}
         </ul>
