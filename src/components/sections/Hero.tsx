@@ -1,8 +1,11 @@
 import treeImg from '../../assets/Logo strom-transparent-enhanced.png'
 import { scrollToSection } from '../../utils/scrollToSectionUtil.ts'
 import { SECTION_TYPES } from '../../types/sectionsType.ts'
+import { useState } from 'react'
 
 export default function Hero() {
+  const [treeLoaded, setTreeLoaded] = useState(false)
+
   return (
     <section
       className="relative min-h-svh overflow-hidden flex items-center"
@@ -20,7 +23,12 @@ export default function Hero() {
           src={treeImg}
           alt=""
           className="w-[min(90vw,1200px)] h-auto"
-          style={{ animation: 'treeRevealRight 2.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both' }}
+          onLoad={() => setTreeLoaded(true)}
+          style={
+            treeLoaded
+              ? { animation: 'treeRevealRight 2.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s both' }
+              : { opacity: 0 }
+          }
         />
       </div>
 
@@ -35,7 +43,9 @@ export default function Hero() {
       />
 
       {/* Content - left column */}
-      <div className="container relative z-10 py-32">
+      <div
+        className={`container relative z-10 py-32 transition-none ${!treeLoaded ? 'fade-in-frozen' : ''}`}
+      >
         <div className="max-w-125">
           {/* Brand wordmark */}
           <p className="font-body text-[12px] font-medium tracking-[10px] uppercase text-gold mb-8 fade-in">

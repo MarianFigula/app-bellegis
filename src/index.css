@@ -103,6 +103,10 @@
   .fade-in {
     animation: fadeInUp 0.8s ease-out both;
   }
+  /* Freeze animations until parent removes this class (e.g. waiting for image load) */
+  .fade-in-frozen .fade-in {
+    animation-play-state: paused;
+  }
   .fade-in-delay-1 {
     animation-delay: 0.1s;
   }
