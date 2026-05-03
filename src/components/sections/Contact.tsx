@@ -18,12 +18,26 @@ const contactInfo = [
 
 export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [submitting, setSubmitting] = useState(false)
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    setSubmitting(true)
     try {
-      // TODO: replace with actual API call
-      console.log('Form submitted:', formData)
+      const res = await fetch('/contact.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      })
+      const data = (await res.json().catch(() => null)) as { success?: boolean; message?: string } | null
+
+      if (!res.ok || !data?.success) {
+        toast.error('Niečo sa pokazilo.', {
+          description: data?.message ?? 'Skúste to prosím znova alebo nás kontaktujte emailom.',
+        })
+        return
+      }
+
       toast.success('Správa bola odoslaná!', {
         description: 'Ozveme sa vám čo najskôr.',
       })
@@ -32,6 +46,8 @@ export default function Contact() {
       toast.error('Niečo sa pokazilo.', {
         description: 'Skúste to prosím znova alebo nás kontaktujte emailom.',
       })
+    } finally {
+      setSubmitting(false)
     }
   }
 
@@ -120,10 +136,11 @@ export default function Contact() {
             </div>
             <button
               type="submit"
-              className="w-full flex items-center justify-center gap-2 font-body text-base font-medium py-4 bg-gold text-warm-white cursor-pointer transition-colors duration-200 hover:bg-gold-dark"
+              disabled={submitting}
+              className="w-full flex items-center justify-center gap-2 font-body text-base font-medium py-4 bg-gold text-warm-white cursor-pointer transition-colors duration-200 hover:bg-gold-dark disabled:opacity-60 disabled:cursor-not-allowed"
             >
               <Send size={18} />
-              Odoslať správu
+              {submitting ? 'Odosielam...' : 'Odoslať správu'}
             </button>
           </form>
         </div>
