@@ -63,8 +63,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- Header -->
                 <tr>
-                    <td style='background-color: #2a1f15; padding: 36px 30px; text-align: center; border-bottom: 3px solid #b98f39;'>
-                        <h1 style='margin: 0; color: #f4ead0; font-family: Georgia, \"Times New Roman\", serif; font-size: 26px; font-weight: 500; letter-spacing: 0.5px;'>
+                    <td style='background-color: #2a1f15; padding: 20px 30px; text-align: center; border-bottom: 3px solid #b98f39;'>
+                        <img src='https://bellegis.sk/logo-transparent.png' alt='BELLegis logo' style='max-width: 110px; height: auto; margin-bottom: 16px; display: block; margin-left: auto; margin-right: auto;' />
+                        <h1 style='margin: 0; color: #f4ead0; font-family: \"Times New Roman\", serif; font-size: 26px; font-weight: 500; letter-spacing: 0.5px;'>
                             BELLegis s. r. o.
                         </h1>
                         <p style='margin: 10px 0 0 0; color: #b98f39; font-size: 11px; letter-spacing: 3px; text-transform: uppercase;'>
@@ -149,13 +150,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 <!-- Header -->
                 <tr>
-                    <td style='background-color: #2a1f15; padding: 40px 30px; text-align: center; border-bottom: 3px solid #b98f39;'>
-                        <h1 style='margin: 0; color: #f4ead0; font-family: Georgia, \"Times New Roman\", serif; font-size: 28px; font-weight: 500; letter-spacing: 0.5px;'>
-                            BELLegis s. r. o.
-                        </h1>
-                        <p style='margin: 12px 0 0 0; color: #b98f39; font-size: 11px; letter-spacing: 3px; text-transform: uppercase;'>
-                            Rastieme spolu
-                        </p>
+                    <td style='background-color: #2a1f15; padding: 24px 30px; text-align: center; border-bottom: 3px solid #b98f39;'>
+                        <img src='https://bellegis.sk/logo-transparent.png' alt='BELLegis logo' style='max-width: 140px; height: auto; margin-top: 18px; display: block; margin-left: auto; margin-right: auto;' />
                     </td>
                 </tr>
 
@@ -196,7 +192,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                         <p style='margin-top: 36px; color: #4a3826; font-family: Arial, sans-serif; font-size: 14px;'>
                             S pozdravom,<br>
-                            <strong style='color: #2a1f15; font-family: Georgia, \"Times New Roman\", serif; font-size: 16px;'>BELLegis s. r. o.</strong>
+                            <strong style='color: #2a1f15; font-family: \"Times New Roman\", serif; font-size: 16px;'>BELLegis s. r. o.</strong>
                         </p>
                     </td>
                 </tr>
@@ -239,4 +235,4 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     http_response_code(405);
     echo json_encode(['success' => false, 'message' => 'Method not allowed']);
 }
-?>
+
