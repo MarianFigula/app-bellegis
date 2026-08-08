@@ -17,7 +17,11 @@ export default function NavLink({ label, href, onClick, scrolled, mobile = false
   const mobileClasses = 'w-full text-left text-brown-mid hover:text-brown-dark hover:bg-gold/8 py-3'
 
   return (
-    <a href={href} onClick={onClick} className={`${base} ${mobile ? mobileClasses : desktopClasses}`}>
+    <a
+      href={href}
+      onClick={onClick}
+      className={`${base} ${mobile ? mobileClasses : desktopClasses}`}
+    >
       {label}
     </a>
   )

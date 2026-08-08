@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { MapPin, Phone, Mail, Send } from 'lucide-react'
 import { toast } from 'sonner'
 import SectionHeader from './SectionHeader.tsx'
@@ -6,6 +6,29 @@ import { SECTION_TYPES } from '../../types/sectionsType.ts'
 
 const inputClass =
   'w-full px-4 py-3 font-body text-sm text-dark-fg bg-dark-fg/10 border border-dark-fg/20 rounded-lg outline-none transition-colors duration-[250ms] placeholder:text-dark-fg/40 focus:ring-1 focus:ring-gold focus:border-gold'
+
+const emptyForm = { name: '', email: '', message: '', subject: '' }
+
+// Above the server's MIN_FILL_SECONDS of 3, to absorb clock skew.
+const MIN_TOKEN_AGE_MS = 3500
+
+// Throws rather than returning '', so a failed request ends in the error toast
+// instead of posting an empty token and going through the expiry retry.
+const fetchToken = async (): Promise<string> => {
+  const res = await fetch('/contact.php', { method: 'GET' })
+  if (!res.ok) {
+    throw new Error(`Token request failed: ${res.status}`)
+  }
+
+  const data = await res.json()
+  if (typeof data.token !== 'string' || data.token === '') {
+    throw new Error('Token missing in response')
+  }
+
+  return data.token
+}
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
 
 const contactInfo = [
   {
@@ -16,22 +39,57 @@ const contactInfo = [
   { icon: <Mail size={18} className="shrink-0" />, text: 'bellegis@bellegis.sk' },
 ]
 
+type ContactResponse = { success?: boolean; message?: string; code?: string }
+
 export default function Contact() {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' })
+  const [formData, setFormData] = useState(emptyForm)
   const [submitting, setSubmitting] = useState(false)
+  const token = useRef({ value: '', receivedAt: 0 })
+
+  const loadToken = async () => {
+    token.current = { value: await fetchToken(), receivedAt: Date.now() }
+  }
+
+  // Fetched on load, not on submit, so the 3 s minimum age is normally already
+  // spent by the time anyone finishes typing.
+  useEffect(() => {
+    loadToken().catch(() => {})
+  }, [])
+
+  const send = async (): Promise<ContactResponse | null> => {
+    if (!token.current.value) {
+      await loadToken()
+    }
+
+    const age = Date.now() - token.current.receivedAt
+    if (age < MIN_TOKEN_AGE_MS) {
+      await sleep(MIN_TOKEN_AGE_MS - age)
+    }
+
+    const res = await fetch('/contact.php', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...formData, token: token.current.value }),
+    })
+
+    return (await res.json().catch(() => null)) as ContactResponse | null
+  }
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setSubmitting(true)
     try {
-      const res = await fetch('/contact.php', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      })
-      const data = (await res.json().catch(() => null)) as { success?: boolean; message?: string } | null
+      let data = await send()
 
-      if (!res.ok || !data?.success) {
+      // The token outlives the page by 2 h at most. Someone who left the tab
+      // open overnight gets a silent re-fetch and one retry rather than an
+      // error telling them to reload and retype everything.
+      if (data?.code === 'token') {
+        token.current = { value: '', receivedAt: 0 }
+        data = await send()
+      }
+
+      if (!data?.success) {
         toast.error('Niečo sa pokazilo.', {
           description: data?.message ?? 'Skúste to prosím znova alebo nás kontaktujte emailom.',
         })
@@ -41,7 +99,8 @@ export default function Contact() {
       toast.success('Správa bola odoslaná!', {
         description: 'Ozveme sa vám čo najskôr.',
       })
-      setFormData({ name: '', email: '', message: '' })
+      setFormData(emptyForm)
+      loadToken().catch(() => {})
     } catch {
       toast.error('Niečo sa pokazilo.', {
         description: 'Skúste to prosím znova alebo nás kontaktujte emailom.',
@@ -142,6 +201,18 @@ export default function Contact() {
               <Send size={18} />
               {submitting ? 'Odosielam...' : 'Odoslať správu'}
             </button>
+
+            <div aria-hidden="true" className="absolute w-px h-px -left-[9999px] overflow-hidden">
+              <input
+                type="text"
+                id="subject"
+                name="subject"
+                value={formData.subject}
+                onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
+                tabIndex={-1}
+                autoComplete="off"
+              />
+            </div>
           </form>
         </div>
       </div>

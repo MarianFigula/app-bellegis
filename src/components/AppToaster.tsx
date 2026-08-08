@@ -12,7 +12,8 @@ export default function AppToaster() {
           fontFamily: 'var(--font-body)',
         },
         classNames: {
-          success: '!border-l-4 !border-l-[var(--color-gold)] [&_[data-icon]]:text-[var(--color-gold)]',
+          success:
+            '!border-l-4 !border-l-[var(--color-gold)] [&_[data-icon]]:text-[var(--color-gold)]',
           error: '!border-l-4 !border-l-red-400 [&_[data-icon]]:text-red-400',
           description: '!text-[var(--color-dark-fg)]',
         },
